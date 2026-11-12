@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050816">
+<title>Senthil — Multi-Cloud & DevSecOps Architect</title>
+<meta name="description" content="Senthil's professional portfolio: multi-cloud architecture, DevOps automation and DevSecOps engineering.">
+<style>
+:root{--bg:#050816;--ink:#f3f7ff;--muted:#9ba9c6;--cyan:#63e8ff;--blue:#6e91ff;--violet:#a98bff;--glass:rgba(12,22,47,.64);--line:rgba(145,180,255,.17);--mx:50vw;--my:35vh}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden;cursor:none}
+a,button{cursor:none}a{color:inherit;text-decoration:none}
+#space{position:fixed;inset:0;width:100%;height:100%;z-index:-3;pointer-events:none}
+.aurora{position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(500px circle at var(--mx) var(--my),rgba(64,151,255,.14),transparent 65%),radial-gradient(ellipse at 15% 20%,rgba(36,89,190,.18),transparent 38%),radial-gradient(ellipse at 85% 65%,rgba(116,54,192,.14),transparent 38%);transition:background .15s}
+.gridbg{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(127,161,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(127,161,255,.13) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.cursor,.cursor-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:20;border-radius:50%;transform:translate(-50%,-50%)}.cursor{width:5px;height:5px;background:white;box-shadow:0 0 14px var(--cyan)}.cursor-ring{width:34px;height:34px;border:1px solid #72dcff99;transition:width .2s,height .2s,border-color .2s}.cursor-ring.hover{width:58px;height:58px;border-color:var(--cyan);background:#5ddfff0c}
+.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10}
+.logo{font-size:15px;font-weight:900;letter-spacing:.19em}.logo b{color:var(--cyan)}
+nav{display:flex;gap:30px;font-size:12px;color:#b6c3df}nav a{transition:.2s}nav a:hover{color:var(--cyan)}
+.nav-cta{padding:11px 16px;border:1px solid #6ee5ff66;border-radius:30px;color:var(--cyan);font-size:11px;letter-spacing:.08em}
+.hero{min-height:770px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:20px;padding:80px 0 95px;position:relative}
+.overline{font-size:10px;letter-spacing:.24em;color:var(--cyan);font-weight:800;display:flex;align-items:center;gap:11px}.overline:before{content:"";width:28px;height:1px;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+h1{font-size:clamp(48px,6.5vw,84px);line-height:.97;letter-spacing:-.065em;margin:26px 0 24px;font-weight:850}
+.gradient{background:linear-gradient(100deg,#fff 2%,#80eaff 42%,#9a9bff 78%,#c5a0ff);color:transparent;background-clip:text;-webkit-background-clip:text}
+.intro{font-size:16px;line-height:1.9;color:var(--muted);max-width:600px}.hero-actions{display:flex;gap:13px;margin-top:32px;flex-wrap:wrap}
+.btn{padding:15px 19px;border-radius:9px;font-size:12px;font-weight:800;letter-spacing:.04em;display:inline-flex;gap:12px;align-items:center;transition:.25s;position:relative;overflow:hidden}
+.btn:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent,rgba(255,255,255,.2),transparent);transform:translateX(-120%);transition:.5s}.btn:hover:after{transform:translateX(120%)}
+.btn.primary{background:linear-gradient(100deg,#5adcf5,#8395ff);color:#061020;box-shadow:0 10px 40px #5adcf533}.btn.ghost{border:1px solid var(--line);background:#0d1730;color:#e8efff}.btn:hover{transform:translateY(-4px)}
+.meta{display:flex;gap:34px;margin-top:46px}.meta strong{display:block;font-size:23px;letter-spacing:-.04em}.meta span{display:block;color:#7f91b4;font-size:9px;letter-spacing:.15em;margin-top:5px}
+.visual{height:550px;position:relative;display:grid;place-items:center;perspective:1100px;transform-style:preserve-3d}
+.scene{width:420px;height:420px;position:relative;transform-style:preserve-3d;transition:transform .18s ease-out}
+.halo{position:absolute;inset:22px;border-radius:50%;border:1px solid #6ddfff38;box-shadow:0 0 100px #427fff18,inset 0 0 60px #6d75ff0c;transform:rotateX(70deg) rotateZ(-20deg);animation:spin 22s linear infinite}
+.halo.two{inset:0;border-color:#b78bff33;transform:rotateY(70deg) rotateZ(30deg);animation:spin2 28s linear infinite}
+.halo.three{inset:60px;border-style:dashed;border-color:#65dfff35;transform:rotateX(72deg) rotateZ(65deg);animation:spin 35s linear infinite reverse}
+.globe{position:absolute;inset:90px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#9cf6ff 0,#3e8eff 14%,#242c7a 42%,#0a1431 72%);box-shadow:inset -28px -25px 50px #020714, inset 10px 10px 35px #c1faff55,0 0 80px #438fff66;transform:translateZ(30px);overflow:hidden}
+.globe:before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(0deg,transparent 0 22px,#9beaff20 23px 24px),repeating-linear-gradient(90deg,transparent 0 22px,#9beaff20 23px 24px);border-radius:50%;transform:rotate(-25deg)}
+.globe:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,transparent 15%,#020817aa 82%)}
+.hub{position:absolute;inset:145px;border:1px solid #b6f8ff9c;background:linear-gradient(145deg,#142d56dd,#081329ee);border-radius:28px;display:grid;place-items:center;text-align:center;transform:translateZ(105px) rotateY(-8deg);box-shadow:0 20px 70px #0009,inset 0 0 35px #5bdfff22}
+.hub strong{font-size:20px;letter-spacing:.12em}.hub small{display:block;color:var(--cyan);font-size:8px;letter-spacing:.2em;margin-top:9px}
+.float{position:absolute;z-index:4;min-width:125px;padding:13px 15px;border:1px solid #87caff40;border-radius:12px;background:linear-gradient(145deg,#132447d9,#091226e8);box-shadow:0 14px 38px #0008;backdrop-filter:blur(16px);font-size:10px;color:#cbd8f2;transform:translateZ(125px);animation:bob 5s ease-in-out infinite}
+.float strong{color:var(--cyan);display:block;font-size:12px;margin-bottom:4px}.f1{top:60px;left:-15px}.f2{top:100px;right:-30px;animation-delay:-1s}.f3{bottom:80px;left:-25px;animation-delay:-2s}.f4{bottom:45px;right:-10px;animation-delay:-3s}
+@keyframes spin{to{transform:rotateX(70deg) rotateZ(340deg)}}@keyframes spin2{to{transform:rotateY(70deg) rotateZ(390deg)}}@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -12px}}
+.scrollhint{position:absolute;bottom:28px;left:0;color:#647594;font-size:9px;letter-spacing:.22em;display:flex;gap:12px;align-items:center}.scrollhint:before{content:"";width:35px;height:1px;background:#6bdbff}
+.section{padding:110px 0;position:relative}.section-head{max-width:690px;margin-bottom:42px}.eyebrow{color:var(--cyan);font-size:10px;letter-spacing:.23em;font-weight:800}.section h2{font-size:clamp(32px,4vw,49px);letter-spacing:-.05em;margin:13px 0}.section-head p{color:var(--muted);line-height:1.8;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:27px;border:1px solid var(--line);background:linear-gradient(145deg,#111d38bb,#0a1125c9);border-radius:17px;min-height:220px;position:relative;transform-style:preserve-3d;transition:border-color .3s,box-shadow .3s;overflow:hidden}.card:before{content:"";position:absolute;inset:0;background:radial-gradient(280px circle at var(--cx,50%) var(--cy,50%),#67cfff17,transparent 60%);opacity:0;transition:opacity .3s}.card:hover{border-color:#72dcff6b;box-shadow:0 20px 60px #0006}.card:hover:before{opacity:1}.card>*{position:relative;transform:translateZ(18px)}.card-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid #6ce4ff38;background:#122747;color:var(--cyan);font-size:19px}.card h3{font-size:17px;margin:20px 0 9px}.card p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chip{border:1px solid #8baeff20;background:#172541;padding:6px 9px;border-radius:20px;color:#bdcbea;font-size:9px}
+.architecture{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.node{padding:24px 16px;border:1px solid var(--line);border-radius:14px;background:#101a32c9;text-align:center;transition:.3s}.node:hover{transform:translateY(-8px);border-color:#7be6ff88}.node b{font-size:24px;color:var(--cyan)}.node h3{font-size:13px}.node p{font-size:10px;line-height:1.7;color:var(--muted)}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.project{padding:27px;border:1px solid var(--line);background:var(--glass);border-radius:16px;transition:.3s}.project:hover{transform:translateY(-5px);border-color:#7be6ff66}.project small{color:var(--cyan);letter-spacing:.18em;font-size:9px}.project h3{margin:12px 0}.project p{font-size:12px;line-height:1.8;color:var(--muted)}.project a{color:var(--cyan);font-size:11px;font-weight:800}
+.contact-panel{padding:42px;border:1px solid #8fb4ff30;border-radius:22px;background:radial-gradient(ellipse at 10% 0,#284b8b55,transparent 50%),linear-gradient(120deg,#111e3a,#171332);display:flex;align-items:center;justify-content:space-between;gap:28px}.contact-panel h2{font-size:clamp(27px,4vw,42px);margin:12px 0}.contact-panel p{color:var(--muted);font-size:13px}.socials{display:flex;gap:9px;flex-wrap:wrap}.socials a{padding:13px 15px;border:1px solid #a1baff35;border-radius:10px;background:#081329;font-size:11px;font-weight:800;transition:.25s}.socials a:hover{color:var(--cyan);border-color:var(--cyan);transform:translateY(-4px)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#7182a3;font-size:10px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+@media(max-width:850px){body{cursor:auto}a,button{cursor:pointer}.cursor,.cursor-ring{display:none}nav{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.visual{grid-row:1;height:460px}.scene{transform:scale(.86)}.cards{grid-template-columns:1fr 1fr}.contact-panel{display:block}.socials{margin-top:24px}}
+@media(max-width:560px){.wrap{width:calc(100% - 30px)}.hero{padding-bottom:65px}.visual{height:360px;margin:-10px -30px}.scene{transform:scale(.68)}h1{font-size:53px}.intro{font-size:14px}.meta{gap:18px}.meta strong{font-size:19px}.meta span{font-size:8px}.cards,.project-grid{grid-template-columns:1fr}.architecture{grid-template-columns:1fr 1fr}.section{padding:75px 0}.contact-panel{padding:26px}footer{display:block;line-height:2.2}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* LinkedIn identity + floating contact assistant */
+.linkedin-nav{display:inline-flex;align-items:center;gap:8px}
+.linkedin-nav svg{width:13px;height:13px;fill:currentColor}
+.chat-launcher{position:fixed;right:26px;bottom:25px;z-index:30;width:62px;height:62px;border:1px solid #8deaff88;border-radius:50%;background:linear-gradient(135deg,#5adcf5,#8395ff);color:#061020;box-shadow:0 12px 40px #5adcf555;display:grid;place-items:center;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.chat-launcher:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 16px 48px #5adcf588}
+.chat-launcher svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.chat-panel{position:fixed;right:26px;bottom:101px;z-index:31;width:min(370px,calc(100vw - 30px));border:1px solid #80dfff55;border-radius:19px;background:linear-gradient(155deg,#111f3c,#080f22 82%);box-shadow:0 24px 80px #000b,0 0 35px #54cfff16;overflow:hidden;display:none;color:var(--ink)}
+.chat-panel.open{display:block;animation:chatIn .22s ease-out}
+@keyframes chatIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.chat-head{padding:18px 19px;background:linear-gradient(110deg,#18365a,#20204b);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #8fbaff28}
+.chat-head-main{display:flex;align-items:center;gap:11px}
+.chat-avatar{width:38px;height:38px;border-radius:12px;background:#5adcf522;border:1px solid #6ee5ff66;display:grid;place-items:center;color:var(--cyan);font-weight:900}
+.chat-head strong{font-size:13px;display:block}.chat-head small{font-size:10px;color:#a9bad9}
+.chat-close{border:0;background:transparent;color:#dceaff;font-size:23px;cursor:pointer;padding:3px 7px}
+.chat-body{padding:18px;max-height:min(58vh,470px);overflow:auto}
+.chat-welcome{font-size:12px;line-height:1.7;color:#c3d0e9;background:#172846;border:1px solid #8dbaff20;padding:13px;border-radius:12px;margin-bottom:15px}
+.chat-topics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 15px}
+.chat-topic{border:1px solid #8fbaff35;background:#0c1830;color:#cbd9f3;border-radius:9px;padding:10px 8px;font-size:10px;text-align:left;cursor:pointer;transition:.2s}
+.chat-topic:hover,.chat-topic.selected{border-color:var(--cyan);color:var(--cyan);background:#122844}
+.chat-label{display:block;color:#9fb1d1;font-size:10px;letter-spacing:.08em;margin:12px 0 6px}
+.chat-input{width:100%;border:1px solid #8fbaff35;border-radius:9px;background:#071126;color:#f3f7ff;padding:11px 12px;font:12px inherit;outline:none}
+.chat-input:focus{border-color:#63e8ff99}
+.chat-input::placeholder{color:#7182a3}
+.chat-send{width:100%;border:0;border-radius:9px;padding:13px;margin-top:13px;background:linear-gradient(100deg,#5adcf5,#8395ff);color:#061020;font-size:11px;font-weight:900;letter-spacing:.06em;cursor:pointer}
+.chat-send:hover{filter:brightness(1.08)}
+.chat-note{font-size:9px;line-height:1.6;color:#8092b3;margin:10px 1px 0}
+.chat-status{display:none;margin-top:12px;padding:11px;border-radius:9px;background:#102c35;border:1px solid #5adcf566;color:#c7f7ff;font-size:11px;line-height:1.6}
+.chat-status.show{display:block}
+@media(max-width:560px){.chat-launcher{right:16px;bottom:17px;width:56px;height:56px}.chat-panel{right:15px;bottom:84px}.linkedin-nav{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.chat-panel.open{animation:none}}
+
+
+/* Animated professional nameplate */
+header.wrap{min-height:96px;height:auto;padding-top:10px;padding-bottom:10px}
+.logo.logo-animated{display:flex;flex-direction:column;align-items:flex-start;gap:3px;letter-spacing:0;line-height:1;position:relative}
+.logo-name{font-size:clamp(25px,3vw,34px);font-weight:950;letter-spacing:.16em;background:linear-gradient(100deg,#fff 5%,#63e8ff 35%,#9a9bff 65%,#fff 90%);background-size:220% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:nameShimmer 5s linear infinite,nameGlow 3s ease-in-out infinite alternate}
+.logo-dot{color:var(--cyan);-webkit-text-fill-color:var(--cyan);display:inline-block;animation:dotPulse 1.8s ease-in-out infinite}
+.logo-role{font-size:8px;font-weight:800;letter-spacing:.19em;color:#9eb2d4;margin-top:4px;white-space:nowrap}
+.logo-animated:after{content:"";height:2px;width:38px;margin-top:5px;border-radius:4px;background:linear-gradient(90deg,var(--cyan),var(--violet));box-shadow:0 0 12px #63e8ff88;transform-origin:left;animation:lineGrow 2.8s ease-in-out infinite alternate}
+@keyframes nameShimmer{to{background-position:220% center}}
+@keyframes nameGlow{from{filter:drop-shadow(0 0 2px #63e8ff22)}to{filter:drop-shadow(0 0 10px #63e8ff66)}}
+@keyframes dotPulse{0%,100%{opacity:.65;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes lineGrow{from{transform:scaleX(.65);opacity:.65}to{transform:scaleX(1.35);opacity:1}}
+@media(max-width:560px){header.wrap{min-height:82px}.logo-name{font-size:23px;letter-spacing:.12em}.logo-role{font-size:6.5px;letter-spacing:.12em}.nav-cta{padding:9px 11px}}
+@media(prefers-reduced-motion:reduce){.logo-name,.logo-dot,.logo-animated:after{animation:none!important}}
+
+</style>
+</head>
+<body>
+<canvas id="space"></canvas><div class="aurora"></div><div class="gridbg"></div><div class="cursor"></div><div class="cursor-ring"></div>
+<header class="wrap"><a class="logo logo-animated" href="#" aria-label="Senthil - Multi-Cloud and DevSecOps Architect"><span class="logo-name">SENTHIL<span class="logo-dot">.</span></span><small class="logo-role">MULTI-CLOUD &amp; DEVSECOPS ARCHITECT</small></a><nav><a href="#expertise">Expertise</a><a href="#architecture">Architecture</a><a href="#work">Projects</a><a href="#connect">Connect</a></nav><a class="nav-cta linkedin-nav" href="https://www.linkedin.com/in/senthil6005/" target="_blank" rel="noopener noreferrer" aria-label="Connect with Senthil on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg> LINKEDIN ↗</a></header>
+<main>
+<section class="wrap hero">
+<div><div class="overline">CLOUD ENGINEERING / SECURITY / AUTOMATION</div><h1>Designing the<br><span class="gradient">cloud-native</span><br>future.</h1>
+<p class="intro">I'm Senthil — a Multi-Cloud & DevSecOps Architect with 8+ years of experience. I focus on building, automating and securing modern cloud platforms, while sharing practical engineering knowledge through hands-on learning and real-world scenarios.</p>
+<div class="hero-actions"><a class="btn primary" href="#work">EXPLORE MY WORK <span>↗</span></a><a class="btn ghost" href="https://github.com/Senthil6005" target="_blank" rel="noreferrer">GITHUB PROFILE ↗</a></div>
+<div class="meta"><div><strong>8+ Years</strong><span>EXPERIENCE</span></div><div><strong>Multi-Cloud</strong><span>ARCHITECTURE</span></div><div><strong>Security-first</strong><span>ENGINEERING</span></div></div></div>
+<div class="visual"><div class="scene" id="scene"><div class="halo"></div><div class="halo two"></div><div class="halo three"></div><div class="globe"></div><div class="hub"><div><strong>MULTI-CLOUD</strong><small>ARCHITECTURE · DEVSECOPS</small></div></div><div class="float f1"><strong>☁ AWS</strong>Cloud infrastructure</div><div class="float f2"><strong>◈ AZURE / GCP</strong>Multi-cloud strategy</div><div class="float f3"><strong>⛨ DEVSECOPS</strong>Security automation</div><div class="float f4"><strong>⌘ KUBERNETES</strong>Cloud-native delivery</div></div></div>
+<div class="scrollhint">SCROLL TO EXPLORE</div>
+</section>
+<section class="section" id="expertise"><div class="wrap"><div class="section-head reveal"><div class="eyebrow">01 / CORE CAPABILITIES</div><h2>Technology. Strategy. Execution.</h2><p>Practical capabilities across cloud platforms, infrastructure automation, secure software delivery and production observability.</p></div><div class="cards">
+<article class="card tilt reveal"><div class="card-icon">☁</div><h3>Multi-Cloud Architecture</h3><p>Cloud foundations, network design, identity, compute, storage, resilience and scalable infrastructure patterns.</p><div class="chips"><span class="chip">AWS</span><span class="chip">Microsoft Azure</span><span class="chip">Google Cloud</span></div></article>
+<article class="card tilt reveal"><div class="card-icon">⌘</div><h3>DevOps & Platform Automation</h3><p>Repeatable infrastructure, CI/CD workflows, configuration management and reliable application delivery.</p><div class="chips"><span class="chip">Jenkins</span><span class="chip">Terraform</span><span class="chip">Ansible</span><span class="chip">Git</span></div></article>
+<article class="card tilt reveal"><div class="card-icon">⛨</div><h3>DevSecOps Engineering</h3><p>Security integrated into development and delivery with code, dependency, container and cloud security checks.</p><div class="chips"><span class="chip">SAST</span><span class="chip">DAST</span><span class="chip">Trivy</span><span class="chip">IAM</span></div></article>
+<article class="card tilt reveal"><div class="card-icon">◫</div><h3>Cloud-Native Platforms</h3><p>Containerized workloads, orchestration, packaging, scaling and operational patterns for distributed systems.</p><div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Helm</span></div></article>
+<article class="card tilt reveal"><div class="card-icon">◉</div><h3>Observability & Reliability</h3><p>Metrics, dashboards, alerting and troubleshooting practices that improve visibility and service reliability.</p><div class="chips"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">CloudWatch</span></div></article>
+<article class="card tilt reveal"><div class="card-icon">⌁</div><h3>Linux & Scripting</h3><p>Linux administration, shell scripting, command-line workflows and practical infrastructure troubleshooting.</p><div class="chips"><span class="chip">Linux</span><span class="chip">Bash</span><span class="chip">Python</span></div></article>
+</div></div></section>
+<section class="section" id="architecture"><div class="wrap"><div class="section-head reveal"><div class="eyebrow">02 / DELIVERY MODEL</div><h2>Secure delivery, end to end.</h2><p>A conceptual view of how cloud foundations, automation, security and operations connect across a modern engineering lifecycle.</p></div><div class="architecture reveal"><div class="node"><b>01</b><h3>Cloud foundation</h3><p>AWS · Azure · GCP<br>Network · IAM · Compute</p></div><div class="node"><b>02</b><h3>Build & automate</h3><p>Git · CI/CD · Terraform<br>Jenkins · Ansible</p></div><div class="node"><b>03</b><h3>Secure by design</h3><p>Code scan · Image scan<br>Secrets · Policy controls</p></div><div class="node"><b>04</b><h3>Deploy & observe</h3><p>Docker · Kubernetes<br>Prometheus · Grafana</p></div></div></div></section>
+<section class="section" id="work"><div class="wrap"><div class="section-head reveal"><div class="eyebrow">03 / PROJECTS & KNOWLEDGE</div><h2>Built around practical learning.</h2><p>Explore my public repositories, technical notes and video walkthroughs. Project details and implementation material are maintained in the linked resources.</p></div><div class="project-grid">
+<article class="project reveal"><small>01 / CLOUD</small><h3>Cloud infrastructure & provisioning</h3><p>Explore cloud labs and infrastructure-as-code learning resources covering core platform concepts and repeatable deployments.</p><a href="https://github.com/Senthil6005" target="_blank">VIEW GITHUB RESOURCES ↗</a></article>
+<article class="project reveal"><small>02 / AUTOMATION</small><h3>CI/CD & DevOps workflows</h3><p>Learn source control, pipeline stages, build automation, container workflows and deployment practices step by step.</p><a href="https://www.youtube.com/@senthil60005" target="_blank">WATCH TECHNICAL VIDEOS ↗</a></article>
+<article class="project reveal"><small>03 / CLOUD-NATIVE</small><h3>Kubernetes & container platforms</h3><p>Hands-on learning around Docker, Kubernetes, Helm and the operating principles of cloud-native applications.</p><a href="https://github.com/Senthil6005" target="_blank">EXPLORE REPOSITORIES ↗</a></article>
+<article class="project reveal"><small>04 / SECURITY</small><h3>DevSecOps implementation</h3><p>Understand security gates and continuous validation across code, dependencies, container images and cloud environments.</p><a href="https://www.youtube.com/@senthil60005" target="_blank">LEARN DEVSECOPS ↗</a></article>
+</div></div></section>
+<section class="section" id="connect"><div class="wrap"><div class="contact-panel reveal"><div><div class="eyebrow">04 / CONNECT & COLLABORATE</div><h2>Let's build what’s next.</h2><p>Follow my technical journey, access learning resources or connect for professional and freelance opportunities.</p></div><div class="socials"><a href="https://www.linkedin.com/in/senthil6005/" target="_blank" rel="noopener noreferrer">in LINKEDIN ↗</a><a href="https://www.youtube.com/@senthil6005" target="_blank" rel="noopener noreferrer">▶ YOUTUBE ↗</a><a href="https://github.com/Senthil6005" target="_blank" rel="noopener noreferrer">⌂ GITHUB ↗</a><a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer">↗ FIVERR ↗</a></div></div></div></section>
+</main>
+
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Contact Senthil" aria-modal="false">
+  <div class="chat-head">
+    <div class="chat-head-main">
+      <div class="chat-avatar">S.</div>
+      <div><strong>Let's connect</strong><small>Senthil · Multi-Cloud & DevSecOps Architect</small></div>
+    </div>
+    <button class="chat-close" id="chatClose" type="button" aria-label="Close chat">×</button>
+  </div>
+  <div class="chat-body">
+    <div class="chat-welcome">Hi! Thanks for visiting my portfolio. What would you like to discuss? Share a few details and continue the conversation with me on LinkedIn.</div>
+    <div class="chat-label">SELECT A TOPIC</div>
+    <div class="chat-topics" id="chatTopics">
+      <button class="chat-topic selected" type="button" data-topic="Professional opportunity">Professional opportunity</button>
+      <button class="chat-topic" type="button" data-topic="AWS / DevOps training">AWS / DevOps training</button>
+      <button class="chat-topic" type="button" data-topic="Cloud consulting">Cloud consulting</button>
+      <button class="chat-topic" type="button" data-topic="Other enquiry">Other enquiry</button>
+    </div>
+    <form id="chatForm">
+      <label class="chat-label" for="chatName">YOUR NAME</label>
+      <input class="chat-input" id="chatName" name="name" placeholder="Enter your name" autocomplete="name" required>
+      <label class="chat-label" for="chatEmail">EMAIL (OPTIONAL)</label>
+      <input class="chat-input" id="chatEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+      <label class="chat-label" for="chatMessage">YOUR MESSAGE</label>
+      <textarea class="chat-input" id="chatMessage" name="message" rows="3" placeholder="How can I help you?" required></textarea>
+      <button class="chat-send" type="submit">CONTINUE TO LINKEDIN ↗</button>
+    </form>
+    <div class="chat-status" id="chatStatus" role="status"></div>
+    <p class="chat-note">Your message is not sent automatically. We'll prepare it for you to copy, then open LinkedIn so you can send it after signing in.</p>
+  </div>
+</div>
+<button class="chat-launcher" id="chatLauncher" type="button" aria-label="Open contact chat" aria-expanded="false" aria-controls="chatPanel">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.7-3.1A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8 11h8M8 14h5"/></svg>
+</button>
+
+<footer class="wrap"><span>© <span id="year"></span> SENTHIL · MULTI-CLOUD & DEVSECOPS ARCHITECT</span><span>ENGINEER WITH CLARITY. AUTOMATE WITH PURPOSE. SECURE BY DESIGN.</span></footer>
+<script>
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cursor=document.querySelector('.cursor'),ring=document.querySelector('.cursor-ring');let px=innerWidth/2,py=innerHeight/2,rx=px,ry=py;
+if(!reduce&&matchMedia('(pointer:fine)').matches){addEventListener('mousemove',e=>{px=e.clientX;py=e.clientY;document.documentElement.style.setProperty('--mx',px+'px');document.documentElement.style.setProperty('--my',py+'px');cursor.style.left=px+'px';cursor.style.top=py+'px'});function follow(){rx+=(px-rx)*.16;ry+=(py-ry)*.16;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(follow)}follow();document.querySelectorAll('a,.card').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hover'));el.addEventListener('mouseleave',()=>ring.classList.remove('hover'))})}
+const scene=document.getElementById('scene');if(!reduce&&matchMedia('(pointer:fine)').matches){document.querySelector('.visual').addEventListener('mousemove',e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;scene.style.transform=`rotateY(${x*18}deg) rotateX(${-y*15}deg)`});document.querySelector('.visual').addEventListener('mouseleave',()=>scene.style.transform='rotateY(0) rotateX(0)')}
+document.querySelectorAll('.tilt').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;card.style.transform=`perspective(900px) rotateX(${(0.5-y)*8}deg) rotateY(${(x-.5)*9}deg) translateY(-5px)`;card.style.setProperty('--cx',x*100+'%');card.style.setProperty('--cy',y*100+'%')});card.addEventListener('mouseleave',()=>card.style.transform='')});
+const canvas=document.getElementById('space'),ctx=canvas.getContext('2d');let w,h,dpr,pts=[];function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);pts=Array.from({length:Math.min(85,Math.floor(w*h/18000))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22}))}resize();addEventListener('resize',resize);function draw(){ctx.clearRect(0,0,w,h);for(let i=0;i<pts.length;i++){let p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.fillStyle='rgba(125,190,255,.48)';ctx.fillRect(p.x,p.y,1.3,1.3);for(let j=i+1;j<pts.length;j++){let q=pts[j],dx=p.x-q.x,dy=p.y-q.y,dist=Math.hypot(dx,dy);if(dist<115){ctx.strokeStyle=`rgba(90,160,255,${(1-dist/115)*.12})`;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}}if(!reduce)requestAnimationFrame(draw)}draw();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));document.getElementById('year').textContent=new Date().getFullYear();
+
+// Floating contact chat: prepare a message for the visitor to send on LinkedIn.
+const chatPanel=document.getElementById('chatPanel');
+const chatLauncher=document.getElementById('chatLauncher');
+const chatClose=document.getElementById('chatClose');
+let selectedChatTopic='Professional opportunity';
+function setChatOpen(open){chatPanel.classList.toggle('open',open);chatLauncher.setAttribute('aria-expanded',String(open));if(open)setTimeout(()=>document.getElementById('chatName').focus(),80)}
+chatLauncher.addEventListener('click',()=>setChatOpen(!chatPanel.classList.contains('open')));
+chatClose.addEventListener('click',()=>setChatOpen(false));
+document.querySelectorAll('.chat-topic').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.chat-topic').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');selectedChatTopic=btn.dataset.topic}));
+document.getElementById('chatForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const name=document.getElementById('chatName').value.trim();
+  const email=document.getElementById('chatEmail').value.trim();
+  const message=document.getElementById('chatMessage').value.trim();
+  if(!name||!message)return;
+  const prepared=`Hello Senthil,\\n\\nMy name is ${name}.${email?' My email is '+email+'.':''}\\nTopic: ${selectedChatTopic}\\n\\n${message}\\n\\nI found your portfolio website and would like to connect.`;
+  const status=document.getElementById('chatStatus');
+  try{await navigator.clipboard.writeText(prepared);status.textContent='Your message has been copied. LinkedIn will open in a new tab. Sign in, open a conversation with Senthil, and paste your message.';}
+  catch(err){status.textContent='Your message is ready. If it is not copied automatically, copy the details you entered before sending your LinkedIn message.';}
+  status.classList.add('show');
+  window.open('https://www.linkedin.com/in/senthil6005/','_blank','noopener,noreferrer');
+});
+
+</script>
+</body></html>
